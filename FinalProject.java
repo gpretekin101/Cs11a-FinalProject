@@ -1,5 +1,5 @@
 public class FinalProject {
-  static int dbSize = 22;
+  static int dbSize = 23;
   static String[] name = new String[dbSize];
   static String[] type = new String[dbSize];
   static String[] description = new String[dbSize];
@@ -22,16 +22,18 @@ public class FinalProject {
   static String[] ing7 = new String[dbSize];
   static double[] meas8 = new double[dbSize];
   static String[] ing8 = new String[dbSize];
+  static String[] directions = new String[dbSize];
 
 
   public static void main(String[] args){
     boolean more = true;
     while (more == true) {
       readSpreadsheet();
+      more = false;
     //  narrowRecipes();
     //  printRecipes();
     //  measurments();
-    //  more();
+    //more = repeat();
     }
   }
 
@@ -41,9 +43,7 @@ public class FinalProject {
     int pos=0;
     while (!TextIO.eof()){
       String line = TextIO.getln(); // read in the next line from the file
-
       String[] fields = line.split(","); // split the columns apart
-
       // fill in the next position of all the arrays with the current fields
       name[pos] = fields[0];
       type[pos] = fields[1];
@@ -67,7 +67,9 @@ public class FinalProject {
       ing7[pos] = fields[19];
       meas8[pos] = Double.parseDouble(fields[20]);
       ing8[pos] = fields[21];
+      directions[pos]= fields[22];
       pos++; // increment position and get ready to load in the next line of data
+
       }
+    }
   }
-}
