@@ -5,7 +5,7 @@ public class FinalProject {
   static String[] description = new String[dbSize];
   static double[] timeList = new double[dbSize];
   static double[] calories = new double[dbSize];
-  static double[] servings = new double[dbSize];
+  static int[] servingsList = new int[dbSize];
   static double[] meas1 = new double[dbSize];
   static String[] ing1 = new String[dbSize];
   static double[] meas2 = new double[dbSize];
@@ -26,12 +26,18 @@ public class FinalProject {
 
 
   public static void main(String[] args){
-    boolean more = true;
-    while (more == true) {
+    boolean moreInput = true;
+    boolean moreRecipes = true;
+    while (moreInput == true) {
       welcome();
       readSpreadsheet();
-      narrowRecipes();
-      more = false;
+      int servings = narrowRecipes();
+      while (moreRecipes == true){
+        int index = chooseRecipe();
+        printRecipe(index, servings);
+        moreRecipes = chooseMore();
+      }
+      moreInput=false;
       //measurments();
       //more();
     }
@@ -52,7 +58,7 @@ public class FinalProject {
       String line = TextIO.getln();
       String[] fields = line.split(",");
       readStrings(pos, fields);
-      readDoubles(pos, fields);
+      readNumbers(pos, fields);
       pos++;
     }
   }
@@ -74,10 +80,10 @@ public class FinalProject {
   }
 
 
-  public static void readDoubles(int pos, String[] fields){
+  public static void readNumbers(int pos, String[] fields){
     timeList[pos] = Double.parseDouble(fields[3]);
     calories[pos] = Double.parseDouble(fields[4]);
-    servings[pos] = Double.parseDouble(fields[5]);
+    servingsList[pos] = Integer.parseInt(fields[5]);
     meas1[pos] = Double.parseDouble(fields[6]);
     meas2[pos] = Double.parseDouble(fields[8]);
     meas3[pos] = Double.parseDouble(fields[10]);
@@ -88,12 +94,14 @@ public class FinalProject {
     meas8[pos] = Double.parseDouble(fields[20]);
   }
 
-  public static void narrowRecipes(){
+  public static int narrowRecipes(){
     String type = getType();
     String label = getLabel();
     int time = getTime();
     int cal = getCal();
+    int servings = getServings();
     printRecipes(type, label, time, cal);
+    return servings;
   }
 
 
@@ -142,6 +150,17 @@ public class FinalProject {
   }
 
 
+  public static int getServings(){
+    TextIO.putf("How many people are you cooking for?%n");
+    int servings = TextIO.getlnInt();
+    if (servings<0){
+      TextIO.putf("That is not a valid entry. Please enter the number of servings you would like to make %n");
+      servings = TextIO.getlnInt();
+    }
+    return servings;
+  }
+
+
   public static void printRecipes(String type, String label, int time, int cal){
     int count = 0;
     for (int i=0; i<dbSize; i++){
@@ -155,6 +174,62 @@ public class FinalProject {
     } else{
       TextIO.putf("Sorry, there are no %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n",type, label, time, cal);
     }
+  }
+
+
+  public static int chooseRecipe(){
+    TextIO.putf("Which dish would you like to get the recipe for?%n");
+    boolean validInput = false;
+    String chosenRecipe;
+    int index=0;
+    do{
+      chosenRecipe = TextIO.getln();
+      validInput=checkInput(chosenRecipe);
+    }while (!validInput);
+    for (int i=0; i<name.length; i++){
+      if (name[i].equalsIgnoreCase(chosenRecipe)){
+        index =i;
+      }
+    }
+    return index;
+  }
+
+  public static boolean checkInput(String chosenRecipe){
+    for (int i=0; i<name.length; i++){
+      if (name[i].equalsIgnoreCase(chosenRecipe)){
+        return true;
+      }
+    }
+    TextIO.putf("Please type the name of the dish you would like to get the recipe for:%n");
+    return false;
+  }
+
+
+  public static void printRecipe(int index, int servings){
+    TextIO.putf("%n%n%n %s%n", name[index]);
+    changeServings(index, servings);
+    TextIO.putf("%1.2f %s %n", meas1[index], ing1 [index]);
+  }
+
+
+  public static void changeServings(int index, int servings){
+    if (servings>servingsList[index]){
+      double multiply = (double)servings/(double)servingsList[index];
+      meas1[index]=multiply*meas1[index];
+      meas2[index]=multiply*meas2[index];
+      meas3[index]=multiply*meas3[index];
+      meas4[index]=multiply*meas4[index];
+      meas5[index]=multiply*meas5[index];
+      meas6[index]=multiply*meas6[index];
+      meas7[index]=multiply*meas7[index];
+      meas8[index]=multiply*meas8[index];
+    }
+  }
+
+
+  public static boolean chooseMore(){
+    TextIO.putf("Would you like to pick another dish to get the recipe for?%n");
+    return TextIO.getlnBoolean();
   }
 }
 
