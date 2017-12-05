@@ -30,11 +30,7 @@ public class FinalProject {
     while (more == true) {
       welcome();
       readSpreadsheet();
-      String type = getType();
-      String label = getLabel();
-      int time = getTime();
-      int cal = getCal();
-      printRecipes(type, label, time, cal);
+      narrowRecipes();
       more = false;
       //measurments();
       //more();
@@ -90,6 +86,14 @@ public class FinalProject {
     meas6[pos] = Double.parseDouble(fields[16]);
     meas7[pos] = Double.parseDouble(fields[18]);
     meas8[pos] = Double.parseDouble(fields[20]);
+  }
+
+  public static void narrowRecipes(){
+    String type = getType();
+    String label = getLabel();
+    int time = getTime();
+    int cal = getCal();
+    printRecipes(type, label, time, cal);
   }
 
 
@@ -154,13 +158,7 @@ public class FinalProject {
   }
 }
 
-      /*
-      for (int i=0; i >=0 && i< 50; i ++) {
-        if (type.equals(type[i]) && label.equals(description[i]) && time[i] <= time && cal[i] >= calories){
-            findings[i] = name[i];
-            count ++;
-          }
-      } TextIO.putf("We have %d recipes that fit the criteria you have inputted %n", count);
+    /*
 
         TextIO.putf("The recipes we found were ");
         for (int i; i < count; i++) {
@@ -196,5 +194,5 @@ public class FinalProject {
       }
    }
 }
->>>>>>> 3834e77b680c25371f699ef8c8b52f42a87a864c
+
 */
