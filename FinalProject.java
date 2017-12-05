@@ -28,81 +28,125 @@ public class FinalProject {
   public static void main(String[] args){
     boolean more = true;
     while (more == true) {
+      welcome();
       readSpreadsheet();
-<<<<<<< HEAD
-      more = false;
-    //  narrowRecipes();
-    //  printRecipes();
-    //  measurments();
-    //more = repeat();
-=======
       narrowRecipes();
-      printRecipes();
-      measurments();
+      more = false;
+      //printRecipes();
+      //measurments();
+      //more();
     }
   }
+
+
+  public static void welcome() {
+    TextIO.putf("Welcome to the Recipe Generator! %n");
+    TextIO.putf("The app will help you make the perfect recipes for your meal%n");
+  }
+
 
   public static void readSpreadsheet(){
     TextIO.readFile("Recipes.csv");
-    TextIO.getln();  // skip the line of headers...
+    TextIO.getln();
     int pos=0;
     while (!TextIO.eof()){
-      String line = TextIO.getln(); // read in the next line from the file
-      String[] fields = line.split(","); // split the columns apart
-      // fill in the next position of all the arrays with the current fields
-      name[pos] = fields[0];
-      type[pos] = fields[1];
-      description[pos] = fields[2];
-      time[pos] = Double.parseDouble(fields[3]);
-      calories[pos] = Double.parseDouble(fields[4]);
-      servings[pos] = Double.parseDouble(fields[5]);
-      meas1[pos] = Double.parseDouble(fields[6]);
-      ing1[pos] = fields[7];
-      meas2[pos] = Double.parseDouble(fields[8]);
-      ing2[pos] = fields[9];
-      meas3[pos] = Double.parseDouble(fields[10]);
-      ing3[pos] = fields[11];
-      meas4[pos] = Double.parseDouble(fields[12]);
-      ing4[pos] = fields[13];
-      meas5[pos] = Double.parseDouble(fields[14]);
-      ing5[pos] = fields[15];
-      meas6[pos] = Double.parseDouble(fields[16]);
-      ing6[pos] = fields[17];
-      meas7[pos] = Double.parseDouble(fields[18]);
-      ing7[pos] = fields[19];
-      meas8[pos] = Double.parseDouble(fields[20]);
-      ing8[pos] = fields[21];
-<<<<<<< HEAD
-      directions[pos]= fields[22];
-=======
-      directions[pos] = fields[22];
->>>>>>> 3834e77b680c25371f699ef8c8b52f42a87a864c
-      pos++; // increment position and get ready to load in the next line of data
-
-      }
+      String line = TextIO.getln();
+      String[] fields = line.split(",");
+      readStrings(pos, fields);
+      readDoubles(pos, fields);
+      pos++;
     }
   }
-<<<<<<< HEAD
-=======
-public static void welcome() {
-    TextIO.putf("Welcome to the Recipe genetor! %n");
-    TextIO.putf("The app will help you make the perfect recipes for your meal");
+
+
+  public static void readStrings(int pos, String[] fields){
+    name[pos] = fields[0];
+    type[pos] = fields[1];
+    description[pos] = fields[2];
+    ing1[pos] = fields[7];
+    ing2[pos] = fields[9];
+    ing3[pos] = fields[11];
+    ing4[pos] = fields[13];
+    ing5[pos] = fields[15];
+    ing6[pos] = fields[17];
+    ing7[pos] = fields[19];
+    ing8[pos] = fields[21];
+    directions[pos] = fields[22];
   }
 
-public static String[] narrowRecipes() {
-      new String[] findings = new String[30];
-      String type, label;
-      int time, cal, count;
-      TextIO.putf("What type of dish would you like to make? %n");
-      TextIO.putf("In this database we have salads, dessert, soups, appetizers, and entrees %n");
-      type = textIO.getln();
-      TextIO.putf("Do your guests have any dietary restrictions? %n");
-      TextIO.putf("We have gluten free, dairy free, vegetarian, and vegan recipes in this database %n");
-      label = TextIO.getln();
-      TextIO.putf("How much time do you have to make the recipe? %n");
+
+  public static void readDoubles(int pos, String[] fields){
+    time[pos] = Double.parseDouble(fields[3]);
+    calories[pos] = Double.parseDouble(fields[4]);
+    servings[pos] = Double.parseDouble(fields[5]);
+    meas1[pos] = Double.parseDouble(fields[6]);
+    meas2[pos] = Double.parseDouble(fields[8]);
+    meas3[pos] = Double.parseDouble(fields[10]);
+    meas4[pos] = Double.parseDouble(fields[12]);
+    meas5[pos] = Double.parseDouble(fields[14]);
+    meas6[pos] = Double.parseDouble(fields[16]);
+    meas7[pos] = Double.parseDouble(fields[18]);
+    meas8[pos] = Double.parseDouble(fields[20]);
+  }
+
+
+  public static void narrowRecipes() {
+    String type, label;
+    int time, cal, count;
+    TextIO.putf("What type of dish would you like to make? %n");
+    type = getType();
+    TextIO.putf("Do your guests have any dietary restrictions? %n");
+    label = getLabel();
+    TextIO.putf("How much time (in minutes) do you have to make the recipe? %n");
+    time = getTime();
+    TextIO.putf("What is the most amount of calories per serving your recipe can have? %n");
+    cal = getCal();
+  }
+
+
+  public static String getType(){
+    TextIO.readStandardInput();
+    String t;
+    do{
+      TextIO.putf("Please type salad, dessert, soup, appetizer, or entree %n");
+      t = TextIO.getln();
+    }while (!t.equalsIgnoreCase("salad") && !t.equalsIgnoreCase("dessert") && !t.equalsIgnoreCase("soup") && !t.equalsIgnoreCase("appetizer") && !t.equalsIgnoreCase("entree"));
+    return t;
+  }
+
+
+  public static String getLabel(){
+    String l;
+    do{
+      TextIO.putf("Please type gluten-free, dairy-free, vegetarian, or vegan %n");
+      l = TextIO.getln();
+    }while (!l.equalsIgnoreCase("gluten-free") && !l.equalsIgnoreCase("dairy-free") && !l.equalsIgnoreCase("vegetarian") && !l.equalsIgnoreCase("vegan"));
+    return l;
+  }
+
+
+  public static int getTime(){
+    int time = TextIO.getlnInt();
+    if (time<0){
+      TextIO.putf("That is not a valid entry. Please enter the amount of time in minutes you have to make this recipe%n");
       time = TextIO.getlnInt();
-      TextIO.putf("What is the most amount of calories your recipe can have? %n");
+    }
+    return time;
+  }
+
+
+  public static int getCal(){
+    int cal = TextIO.getlnInt();
+    if (cal <0){
+      TextIO.putf("That is not a valid entry. Please enter the maximum amount of calories per serving your recipe can have%n");
       cal = TextIO.getlnInt();
+  }
+  return cal;
+  }
+}
+
+
+      /*
       for (int i=0; i >=0 && i< 50; i ++) {
         if (type.equals(type[i]) && label.equals(description[i]) && time[i] <= time && cal[i] >= calories){
             findings[i] = name[i];
@@ -145,3 +189,4 @@ public static String[] narrowRecipes() {
    }
 }
 >>>>>>> 3834e77b680c25371f699ef8c8b52f42a87a864c
+*/
