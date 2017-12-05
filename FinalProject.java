@@ -1,9 +1,9 @@
 public class FinalProject {
-  static int dbSize = 23;
+  static int dbSize = 21;
   static String[] name = new String[dbSize];
-  static String[] type = new String[dbSize];
+  static String[] typeList = new String[dbSize];
   static String[] description = new String[dbSize];
-  static double[] time = new double[dbSize];
+  static double[] timeList = new double[dbSize];
   static double[] calories = new double[dbSize];
   static double[] servings = new double[dbSize];
   static double[] meas1 = new double[dbSize];
@@ -30,9 +30,12 @@ public class FinalProject {
     while (more == true) {
       welcome();
       readSpreadsheet();
-      narrowRecipes();
+      String type = getType();
+      String label = getLabel();
+      int time = getTime();
+      int cal = getCal();
+      printRecipes(type, label, time, cal);
       more = false;
-      //printRecipes();
       //measurments();
       //more();
     }
@@ -61,7 +64,7 @@ public class FinalProject {
 
   public static void readStrings(int pos, String[] fields){
     name[pos] = fields[0];
-    type[pos] = fields[1];
+    typeList[pos] = fields[1];
     description[pos] = fields[2];
     ing1[pos] = fields[7];
     ing2[pos] = fields[9];
@@ -76,7 +79,7 @@ public class FinalProject {
 
 
   public static void readDoubles(int pos, String[] fields){
-    time[pos] = Double.parseDouble(fields[3]);
+    timeList[pos] = Double.parseDouble(fields[3]);
     calories[pos] = Double.parseDouble(fields[4]);
     servings[pos] = Double.parseDouble(fields[5]);
     meas1[pos] = Double.parseDouble(fields[6]);
@@ -90,22 +93,9 @@ public class FinalProject {
   }
 
 
-  public static void narrowRecipes() {
-    String type, label;
-    int time, cal, count;
-    TextIO.putf("What type of dish would you like to make? %n");
-    type = getType();
-    TextIO.putf("Do your guests have any dietary restrictions? %n");
-    label = getLabel();
-    TextIO.putf("How much time (in minutes) do you have to make the recipe? %n");
-    time = getTime();
-    TextIO.putf("What is the most amount of calories per serving your recipe can have? %n");
-    cal = getCal();
-  }
-
-
   public static String getType(){
     TextIO.readStandardInput();
+    TextIO.putf("What type of dish would you like to make? %n");
     String t;
     do{
       TextIO.putf("Please type salad, dessert, soup, appetizer, or entree %n");
@@ -116,6 +106,7 @@ public class FinalProject {
 
 
   public static String getLabel(){
+    TextIO.putf("Do your guests have any dietary restrictions? %n");
     String l;
     do{
       TextIO.putf("Please type gluten-free, dairy-free, vegetarian, or vegan %n");
@@ -126,6 +117,7 @@ public class FinalProject {
 
 
   public static int getTime(){
+    TextIO.putf("How much time (in minutes) do you have to make the recipe? %n");
     int time = TextIO.getlnInt();
     if (time<0){
       TextIO.putf("That is not a valid entry. Please enter the amount of time in minutes you have to make this recipe%n");
@@ -136,15 +128,31 @@ public class FinalProject {
 
 
   public static int getCal(){
+    TextIO.putf("What is the most amount of calories per serving your recipe can have? %n");
     int cal = TextIO.getlnInt();
     if (cal <0){
       TextIO.putf("That is not a valid entry. Please enter the maximum amount of calories per serving your recipe can have%n");
       cal = TextIO.getlnInt();
-  }
+    }
   return cal;
   }
-}
 
+
+  public static void printRecipes(String type, String label, int time, int cal){
+    int count = 0;
+    for (int i=0; i<dbSize; i++){
+      if(typeList[i].equalsIgnoreCase(type) && description[i].equalsIgnoreCase(label) && timeList[i]<=time && calories[i]<=cal){
+        count++;
+        TextIO.putf("%d. %s%n", count, name[i]);
+      }
+    }
+    if (count>0){
+      TextIO.putf("There are %d %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n",count, type, label, time, cal);
+    } else{
+      TextIO.putf("Sorry, there are no %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n",type, label, time, cal);
+    }
+  }
+}
 
       /*
       for (int i=0; i >=0 && i< 50; i ++) {
