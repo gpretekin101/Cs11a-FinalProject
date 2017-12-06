@@ -31,11 +31,10 @@ public class FinalProject {
     while (moreInput == true) {
       welcome();
       readSpreadsheet();
-<<<<<<< HEAD
       welcome();
       narrowRecipes();
       //printRecipes();
-=======
+
       int servings = narrowRecipes();
       while (moreRecipes == true){
         int index = chooseRecipe();
@@ -43,14 +42,10 @@ public class FinalProject {
         moreRecipes = chooseMore();
       }
       moreInput=false;
->>>>>>> e2e710df7eeb169201672d0d7bfe097e0c95c77d
       //measurments();
       //more();
     }
   }
-<<<<<<< HEAD
-=======
-
 
   public static void welcome() {
     TextIO.putf("Welcome to the Recipe Generator! %n");
@@ -58,7 +53,6 @@ public class FinalProject {
   }
 
 
->>>>>>> e2e710df7eeb169201672d0d7bfe097e0c95c77d
   public static void readSpreadsheet(){
     TextIO.readFile("Recipes.csv");
     TextIO.getln();
@@ -103,6 +97,7 @@ public class FinalProject {
     meas8[pos] = Double.parseDouble(fields[20]);
   }
 
+
   public static int narrowRecipes(){
     String type = getType();
     String label = getLabel();
@@ -112,13 +107,14 @@ public class FinalProject {
     printRecipes(type, label, time, cal);
     return servings;
   }
-<<<<<<< HEAD
-public static void welcome() {
-    TextIO.putf("Welcome to the Recipe genetor! %n");
-    TextIO.putf("The app will help you make the perfect recipes for your meal");
-  }
 
-public static String narrowRecipes() {
+
+  public static void welcome() {
+      TextIO.putf("Welcome to the Recipe genetor! %n");
+      TextIO.putf("The app will help you make the perfect recipes for your meal");
+    }
+
+  public static String narrowRecipes() {
       String[] findings = new String[30];
       String typeU, label;
       int timeU, cal, count;
