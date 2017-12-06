@@ -31,6 +31,11 @@ public class FinalProject {
     while (moreInput == true) {
       welcome();
       readSpreadsheet();
+<<<<<<< HEAD
+      welcome();
+      narrowRecipes();
+      //printRecipes();
+=======
       int servings = narrowRecipes();
       while (moreRecipes == true){
         int index = chooseRecipe();
@@ -38,10 +43,13 @@ public class FinalProject {
         moreRecipes = chooseMore();
       }
       moreInput=false;
+>>>>>>> e2e710df7eeb169201672d0d7bfe097e0c95c77d
       //measurments();
       //more();
     }
   }
+<<<<<<< HEAD
+=======
 
 
   public static void welcome() {
@@ -50,6 +58,7 @@ public class FinalProject {
   }
 
 
+>>>>>>> e2e710df7eeb169201672d0d7bfe097e0c95c77d
   public static void readSpreadsheet(){
     TextIO.readFile("Recipes.csv");
     TextIO.getln();
@@ -103,6 +112,34 @@ public class FinalProject {
     printRecipes(type, label, time, cal);
     return servings;
   }
+<<<<<<< HEAD
+public static void welcome() {
+    TextIO.putf("Welcome to the Recipe genetor! %n");
+    TextIO.putf("The app will help you make the perfect recipes for your meal");
+  }
+
+public static String narrowRecipes() {
+      String[] findings = new String[30];
+      String typeU, label;
+      int timeU, cal, count;
+      TextIO.putf("What type of dish would you like to make? %n");
+      TextIO.putf("In this database we have salads, dessert, soups, appetizers, and entrees %n");
+      typeU = TextIO.getln();
+      TextIO.putf("Do your guests have any dietary restrictions? %n");
+      TextIO.putf("We have gluten free, dairy free, vegetarian, and vegan recipes in this database %n");
+      label = TextIO.getln();
+      TextIO.putf("How much time do you have to make the recipe? %n");
+      timeU = TextIO.getlnInt();
+      TextIO.putf("What is the most amount of calories your recipe can have? %n");
+      cal = TextIO.getlnInt();
+      for (int i=0; i >=0 && i< 50; i ++) {
+        if (typeU.equals(type[i]) && label.equals(description[i]) && time[i] <= timeU && calories[i] <= cal){
+            findings[i] = name[i];
+            count ++;
+          }
+      } TextIO.putf("We have %d recipes that fit the criteria you have inputted %n", count);
+        return findings[]
+=======
 
 
   public static String getType(){
@@ -236,29 +273,30 @@ public class FinalProject {
 
     /*
 
+>>>>>>> e2e710df7eeb169201672d0d7bfe097e0c95c77d
         TextIO.putf("The recipes we found were ");
         for (int i; i < count; i++) {
-            if (type.equals(type[i]) && label.equals(description[i]) && time[i] <= time && cal[i] >= calories){
+            if (typeU.equals(type[i]) && label.equals(description[i]) && time[i] <= timeU && calories[i] <= cal){
                 TextIO.putf("%s", name[i]);
                 TextIO.putf("Ingredients: %n");
-                for (int j; int j < 8; j++) { //goes through each of the ingredients and measurements
-                  if (ing1[i]!= X) {
+                for (int j=0; j<8; j++) { //goes through each of the ingredients and measurements
+                  if (!ing1[i].equals("X")) {
                       TextIO.putf("%d %s %n", meas1, ing1);
-                  } if (ing2[i]!= X) {
+                  } if (!ing2[i].equals("X")) {
                       TextIO.putf("%d %s %n", meas2, ing2);
-                  } if (ing3[i]!= X) {
+                  } if (!ing3[i].equals("X")) {
                       TextIO.putf("%d %s %n", meas3, ing3);
-                  } if (ing4[i]!= X) {
+                  } if (!ing4[i].equals("X")) {
                       TextIO.putf("%d %s %n", meas4, ing4);
-                  } if (ing5[i]!= X) {
+                  } if (!ing5[i].equals("X")) {
                       TextIO.putf("%d %s %n", meas5, ing5);
-                  } if (ing6[i]!= X) {
+                  } if (!ing6[i].equals("X")) {
                       TextIO.putf("%d %s %n", meas6, ing6);
-                  } if (ing7[i]!= X) {
+                  } if (!ing7[i].equals("X")) {
                       TextIO.putf("%d %s %n", meas7, ing7);
-                    } if (ing8[i]!= X) {
-                        TextIO.putf("%d %s %n", meas8, ing8);
-                  else {
+                  } if (!ing5[i].equals("X")) {
+                      TextIO.putf("%d %s %n", meas8, ing8);
+                  } else {
                       break;
                   }
                 }
@@ -269,6 +307,10 @@ public class FinalProject {
             }
       }
    }
+<<<<<<< HEAD
+ }
+=======
 }
 
 */
+>>>>>>> e2e710df7eeb169201672d0d7bfe097e0c95c77d
