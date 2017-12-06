@@ -173,6 +173,7 @@ public class FinalProject {
       TextIO.putf("There are %d %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n",count, type, label, time, cal);
     } else{
       TextIO.putf("Sorry, there are no %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n",type, label, time, cal);
+      //ask to do again
     }
   }
 
