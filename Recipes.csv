@@ -1,155 +1,22 @@
-name ,"type (appetizer, soup, salad, entree...)","description (gluten free, vegetarian, vegan....)",time to make (in min) ,calories per serving ,how many servings current recipe makes ,measurement 1 (#) for one serving,meas. + inged.,M2,I2,M3,I3,M4,I4,M4,I5,M6,I6,M7,I7,M8,18,Directions
-Pizza Margherita,entree ,vegetarian ,30,285,4,10,ounces of pizza dough ,1,cloves of garlic,1,teaspoon of olive oil,5,sliced plum tomatoes,1,cup shredded mozzarella cheese ,0.5,cup of basil ,0.25,teaspoon pepper,0.25,teaspoons salt ,">1. Preheat oven to 400 degrees.
->2. unroll pizza dough onto a packing sheet and pat into a rectangle 
->3. Bake crust at 400 degrees for 8 minutes
->4. remove crust from oven and brush with olive oil  
->5. Arrange tomato slices on the crust 
->6. Sprinkle crust evenly with cheese 
-> 7. Bake crust at 400 degrees for 12 minutes until cheese melts and crust is golden 
-> 8. Sprinkle pizza with basil, salt, and pepper 
-"
-Southwest Omlette ,entree ,vegetarian ,35,94,2,2,tablespoons cilantro,0.25,teaspoons salt,4,egg  whites ,1,eggs,0.5,cups canned black beans,0.25,cups choopped green onions ,0.25,reduced fat chedder cheese ,0.25,cups salsa ,">1. Combine cilantro, salt, egg whites, and eggs in a medium bowl and stir them with a whisk 
-> 2. Add beans, onions, cheese, and salsa in another bowl 
->3. heat a frying pan over medium heat 
-> 4. Pour egg mixture into pan 
-> 5. Cook for 3 minutes 
->6. flip omlete 
->7. Put bean mixture on one half of the omlete and fold omlete in half 
->8. Cook 1 more minute until the cheese melts 
->9. slide omlete onto plate 
-"
-vegatarian chili,soup,vegetarian ,50,256,4,1,tablespoons vegetable oil ,2,cups chopped onions ,0.5,cups chopped yellow pepper ,2,minced garlic clovves ,1.5,tablespoons chili powder,1,teaspoon ground cumin,16,ounces of stewed tomatoes ,15,ounces of canned black beans ,">1. Heat the oil in put over medium heat 
->2. Add onions, bell peppers, and garlic and saute 
->3. Add cumin, tomatos, chili powder and black beans 
->4. Bring pot to a boil
->5. Reduce heat and allow chili to simmer for 30 min 
-"
-Baked Chicken Schnitzel,entree ,dairy free ,30,385,1,0.5,tablespoons olive oil,1,chicken breasts ,1,teaspoons of pepper ,2,tablespoons of flour,0.5,tablespoons paprika ,1,eggs,0.5,cups seasoned bread crumbs,0.4,cups lemon juice ,">1. Preheat oven to 424 degrees 
->2. Line a baking sheet with foil and drizzle olive oil over the foil 
->3. Place the baking sheet in the oven 
->4. Flatten chicken breasts so they are about Â¼ of an inch thick 
->5. Season chicken with salt and pepper 
->6. Mix flour and paprike together on a large plate 
->7. Beat eggs 
->8. add salt and pepper to egg mixture
->9. Mix bread crumps and lemon juice together on a seperate large plate 
->10. Dredge each chicken piece in the flour mixture, then the egg mixture, then the bread crumb mixture before putting it on a seperate plate 
->11. Take baking sheet out of the oven and arrange chicken on it in 1 layer 
->12. Drizzle olive oil over each piece of coated chicken
->13. Bake chicken in the oven for 5-6 min
->14. Flip chicken and then cooking for 5-6 min more 
-"
-taco pie ,entree ,no label ,30,687,2,1,medium pie crust ,0.25,pounds ground beef ,1,package of taco seasoning ,4,ounces of sour cream ,8,ounces shreddded cheese ,1,bag of tortilla chips ,X,X,X,X,">1. Preheat oven to 350 degrees 
->2. Put pie crust in packing pan and bake according to the directions 
->3.Brown the ground beef in a large pan over medium eat 
->4. Add taco seasoning to the meat and stir together
->5. When pie crust is done cooking, take it out of the oven and place meat on top of it 
->6. Layer with sour cream and cheese. 
->7. Put a layer of chips on the top 
->8. Return pie crust to the oven and let it bake for 10 min "
-spinach and feta pasta ,entree ,vegetarian ,40,450,1,4,ounces of penna pasta ,1,tablespoons olive oil,0.25,cups chopped onion ,0.5,minced clove of garlic ,0.5,cups chopped tomatoes ,2,teaspoons salt ,2,teaspoons pepper ,0.25,pounds of red pepper flakes ,">1. Bring a large pot of water to a boil 
->2. Book pasta in boiling water until it is soft and then drain the water
->3. Heat olive oil in a large skillet over medium high heat 
->4. Add onion and garlic to the skillet and cook them until the onions are brown 
->5. Mix tomatoes, mushrooms, and spinach into the onion mixture. 
->6. Season the onion mixture with salt, pepper, and red pepper flakes  
->7. Cook the onion mixture for 2 more minutes until tomatoes are heated through and spinach is wilted
->8. Reduce eat to medium and stir in pasta and feta cheese 
->9. Cook pasta until it is heat through
-"
-Salmon with Brown Sugar Glaze,entree ,gluten free ,15,30,1,1,tablespoon brown sugar,1,teaspoons dijon mustard,6,ounce boneless salmon fillets ,1,teaspoon salt ,1,teaspoon pepper ,X,X,X,X,X,X,">1. Preheat the oven to 300 degree and set the oven rack about 6 inches from the heat source 
->2. Season the salom with salt and pepper before arranging it on a pan
->3. Whisk together the born sugar and dijon mustard in a small bowl
->4. Spoon the brown sugar evenly on top of the salmon fllets 
->5. Cook the fish under the broiler for about 10-15 minutes until the fish flakes easily with a fork 
-"
-grilled cheese ,entree ,vegetarian ,20,400,1,2,slices white bread ,1,tablespoon of butter,1,slice of chedder cheese ,X,X,X,X,X,X,X,X,X,X,">1. Preheat skillet over medium heat
->2. Generously one slice of bread 
->3. PLace bread butter side down on skillet and add one slice of cheese 
->4. Butter second slice of bread on one side and place it butter side up on top of the sandwich 
->5. Grill the sandwich lightly until it is browned and then flip it 
-"
-Veggie Stir Fry ,entree ,vegan ,40,119,1,0.5,teaspoons cornstarch,0.25,crushed cloves of garlic ,2,teaspoons vegetable oil ,0.25,heads of broccli cut into florets ,2,tablespoons of carrots cut lengthwise ,1,teaspoons soy sauce ,1,teaspoons of water,2,teaspoons chopped onion ,">1. In large bowl, blend cornstarch, garlic, and 1 tablespoon vegetable oil until cornstarch is dissolve 
->2. Mix in broccoli, carrots,and green beans. Toss them until they are lightly coated in the sauce 
->3. Heat remaining 1 tablespoon of vegetable oil in a large skillet 
->4. Cook vegetables in oil for 2 minutes 
->5. Stir in soy sauce and water 
->6. Mix in onions and salt 
->7. Cook until vegetables are tender but still crisp
-"
-tomato basil soup ,soup ,vegetarian ,30,350,1,1,tablespoon olive oil,5,ounces condenscend tomato soup ,2,tablespoons mariania sauce  ,0.5,cloves of garlic ,0.5,teaspoons oregano,1,teaspoons chopped basil,3, italian style seasoned crotons ,1,tablespoons grated permesan cheese  ,">1. Heat olive oil in a large saucepan over medium heat 
->2. Saute garlic in oil for 2-3 minutes and stir 
->3. Stir condensed tomato soup and marinara sauce into garlic 
->4. Slowly add water
->5. Mix oregano and black pepper into soup
->6. Bring soup to a simmer and then return the heat from high to low 
->7. Cook soup for 15 more minutes 
->8. Stir basil into soup 
->9. Ladle soup into bowls and top with with croutons and Parmesan cheese."
-Brownies,dessert,nut free,40,200,10,0.5,cup vegetable oil,1,cup sugar,1,teaspoon vanilla,2,eggs,0.25,teaspoon baking powder,0.33,cup cocoa powder,0.5 cup,flour,0.25,teaspoon salt,">1. Mix oil and sugar
->2. Add eggs and vanilla
->3. Mix dry ingredients in a separate bowl
->4. Stir all ingredients together and pour into an 8x8 pan
->5. Bake for 30 minutes at 350o
-"
-Pesto pasteries,appetizer,vegetarian ,40,150,10,2,"tablespoons pine nuts, toasted",1,garlic clove,3,tablespoons grated Parmigiano-Reggiano cheese,2,1 ounce packages frozen basil,1,"sheet frozen puff pastery dough, thawed",0.375,teaspoon kosher salt,X,X,X,X,">1. Pulse nuts and garlic in a mini food processor until finely chopped
->2. Add cheese
->3. Tear leaves off basil and add to processor
->4. Process until paste-like
->5. Roll dough into 10x9 rectangle. Spread pesto over dough and sprinkle with salt
->6. Roll up the long sides of the dough until they meet in the middle. Place in freezer for 10 minutes
->7. Cut dough cross wise into 20 slices. Arrange on a cookie sheet and bake at 400o for 16 minutes
-"
-Turkey Meatballs,appetizer,gluten free ,40,100,1,100,grams turkey mince,0.25,"garlic clove, peeled and chopped",1,"Cavolo Nero leaf, leaves chopped finely",0.1,teaspoon salt ,X,"cocunut oil, for frying",X,X,X,X,X,X,">1. Empty mince into mixing bowl. Add garlic and chopped Cavolo Nero leaf
->2. Add salt and mix well
->3. Heat coconut oil in a frying pan and form the mixture into balls. Drop them in the ban for 5-10 minutes
->4. Place the meatballs in the oven at 400o for 10-15 minutes
-"
-Slow cooker pulled chicken,entree ,gluten free ,180,200,4,1,pound chicken breask,1,16 oz jar of salsa,1,15 ounce can of black beans,0.33,cup crumbled feta,0.5,teaspoon cumin,0.5,teaspoon smoked paprika,X,"red pepper flakes, salt and pepper to taste",X,X,">1. Pour salsa into slow cooker and layer beans and chicken on top
->2. Cook on high for three hours
->3. After 3 hours, remove chicken from slow cooker and shred with forks. Place back into slow cooker. 
->4. Add spices and cheese and mix to combine
-"
-White wine and butter pasta,entree ,vegan ,15,250,1,4,tablespoons butter,2,cloves garlic,1.5,tablespoons flour,0.33,cup white wine,0.25,cup capers,1,"lemon, juiced",X,salt to taste,X,X,">1. Melt half of the butter in a small frying pan, then add garlic
->2. When fragrant, add flour and stir to combine. Add white wine
->3. Turn down heat to let alcohol cook off
->4. Turn heat back up and add lemon juice and remaining butter
->5. Stir to combine and serve over pasta, with capers
-"
-Sweet potato gnocchi,entree ,vegetarian ,70,200,4,2,sweet potatoes,1.25,cups flour,1,egg,X,salt and pepper to taste,X,X,X,X,X,X,X,X,">1. Bake the potatoes for 1 hour at 400o. Mash the potatoes
->2. Combine mashed potatoes with egg and flour until dough is formed
->3. Shape gnocchi, use a fork to give a slight indentation
->4. Cook in boiling water. They are done when they float to the top. 
-"
-Chilaquiles,entree ,vegan ,10,350,1,1,teaspoon oil,3,eggs,2.5,cups tottilla chips,0.5,cup shredded cheese,2,tablespoons hot sauce,X,X,X,X,X,X,">1. Beat the eggs
->2. Add oil to a hot nonstick pan
->3. Pour in eggs and quickly mix in tortilla chips
->4. Stir in cheese and lower heat, cook for 3-4 minutes
->5. Remove from pan and drizzle with hot sauce 
-"
-"Watermelon, feta, and mint salad",salad,vegetarian ,5,100,1,2,containers watermelon cubes,1,pack of mint leaves,X,feta cheese crumbles,1,cup arugla leaves,X,X,X,X,X,X,X,X,">1. Chop the watermelon and mint into small pieces
->2. Place watermelon and mint in a bowl of arugula and mix to combine
->3. Top with feta  
-"
-Warm beet salad ,salad,vegerarian,90,150,1,0.5,bunch of beets,0.5,medium onion,1,tablespoon olive oil,0.5,cup cookied quinoa,0.25,"cup feta cheese, crumbled",X,X,X,X,X,X,">1. Preheat oven to 400o
->2. Scrub beets, wrap in aluminum foil, and roast on a baking sheet for an hour. Cut into quarters
->3. Separate stems from greens. Wash and dry both
->4. Sautee onion in olive oil in a medium pan, add beet stems and cook for 5 minutes
->5. Add greens and seasoning to taste, cook until greens are mostly wilted
->6. Add cooked grains and roasted beets to the pan, toss to combine
->7. Transfer into a bowl and top with crumbled cheese  
-"
-Vegetable stir fry,entree ,vegan ,15,300,1,1,packet frozen brown rice,0.2,package firm tofu,2,cups chopped vegetables,0.25,seasame ginger dressing,X,X,X,X,X,X,X,X,">1. Cook the rice
->2. Cube tofu into 1-inch squares
->3. Cook vegetables until tender
->4. Heat dressing in a skillet. Add vegetables and tofu and mix to combine. Cook 3-4 minutes
->5. Place rice in a bowl. Scoop mixture on top to serve 
-"
-Cheesy Quinoa Fritters,appetizer,vegetarian ,15,250,2,1,cup cooked quinoa,1,eggs,1,teaspoon flour,0.5,cup shredded cheese,1,tablespoon oil,X,salt and pepper to taste,X,X,X,X,">1. Beat egg
->2. In a separate bowl, mix quinoa and cheese. Pour in egg and mix
->3. Add flour, salt, and pepper, and stir to combine
->4. Add oil to a skillet and heat
->5. Create small balls of mixture and slightly flatten. Place fritters into pan
->6. Cook fritters for 5 minutes on each side
->7. Allow to cool slightly on paper towel 
-"
+name ,type (appetizer; soup; salad; entree...),description (gluten free; vegetarian; vegan....),time to make (in min) ,calories per serving ,how many servings current recipe makes ,measurement 1 (#) for one serving,meas. + inged.,M2,I2,M3,I3,M4,I4,M4,I5,M6,I6,M7,I7,M8,18,Directions
+Pizza Margherita,entree,vegetarian,30,285,4,10,ounces of pizza dough ,1,cloves of garlic,1,teaspoon of olive oil,5,sliced plum tomatoes,1,cup shredded mozzarella cheese ,0.5,cup of basil ,0.25,teaspoon pepper,0.25,teaspoons salt ,>1. Preheat oven to 400 degrees >2. unroll pizza dough onto a packing sheet and pat into a rectangle >3. Bake crust at 400 degrees for 8 minutes >4. remove crust from oven and brush with olive oil >5. Arrange tomato slices on the crust >6. Sprinkle crust evenly with cheese > 7. Bake crust at 400 degrees for 12 minutes until cheese melts and crust is golden > 8. Sprinkle pizza with basil salt and pepper
+Southwest omlette,entree,vegetarian,35,94,2,2,tablespoons cilantro,0.25,teaspoons salt,4,egg  whites ,1,eggs,0.5,cups canned black beans,0.25,cups choopped green onions ,0.25,reduced fat chedder cheese ,0.25,cups salsa ,>1. Combine cilantro. salt. egg whites. and eggs in a medium bowl and stir them with a whisk > 2. Add beans. onions. cheese. and salsa in another bowl >3. heat a frying pan over medium heat > 4. Pour egg mixture into pan > 5. Cook for 3 minutes >6. flip omlete >7. Put bean mixture on one half of the omlete and fold omlete in half >8. Cook 1 more minute until the cheese melts >9. slide omlete onto plate
+vegatarian chili,soup,vegetarian,50,256,4,1,tablespoons vegetable oil ,2,cups chopped onions ,0.5,cups chopped yellow pepper ,2,minced garlic clovves ,1.5,tablespoons chili powder,1,teaspoon ground cumin,16,ounces of stewed tomatoes ,15,ounces of canned black beans ,>1. Heat the oil in put over medium heat >2. Add onions. bell peppers. and garlic and saute >3. Add cumin tomatos. chili powder and black beans >4. Bring pot to a boil >5. Reduce heat and allow chilli to simmer for 30 mins
+Baked Chicken Schnitzel ,entree,dairy-free,30,385,1,0.5,tablespoons olive oil,1,chicken breasts ,1,teaspoons of pepper ,2,tablespoons of flour,0.5,tablespoons paprika ,1,eggs,0.5,cups seasoned bread crumbs,0.4,cups lemon juice ,>1. Preheat oven to 424 degrees >2. Line a baking sheet with foil and drizzle olive oil over the foil >3. Place the baking sheet in the oven >4. Flatten chicken breasts so they are about ¼ of an inch thick >5. Season chicken with salt and pepper >6. Mix flour and paprika together on a large plate >7. Beat eggs >8. add salt and pepper to egg mixture >9. Mix bread crumps and lemon juice together on a seperate large plate >10. Dredge each chicken piece in the flour mixture. then the egg mixture. then the bread crumb mixture before putting it on a seperate plate >11. Take baking sheet out of the oven and arrange chicken on it in 1 layer >12. Drizzle olive oil over each piece of coated chicken >13. Bake chicken in the oven for 5-6 min >14. Flip chicken and then cooking for 5-6 min more
+taco pie ,entree,no label ,30,687,2,1,medium pie crust ,0.25,pounds ground beef ,1,package of taco seasoning ,4,ounces of sour cream ,8,ounces shreddded cheese ,1,bag of tortilla chips ,0,0,0,0,>1. Preheat oven to 350 degrees >2. Put pie crust in packing pan and bake according to the directions >3.Brown the ground beef in a large pan over medium heat >4. Add taco seasoning to the meat and stir together >5. When pie crust is done cooking. take it out of the oven and place meat on top of it  >6. Layer with sour cream and cheese. >7. Put a layer of chips on the top >8. Return pie crust to the oven and let it bake for 10 min
+spinach and feta pasta ,entree,vegetarian,40,450,1,4,ounces of penna pasta ,1,tablespoons olive oil,0.25,cups chopped onion ,0.5,minced clove of garlic ,0.5,cups chopped tomatoes ,2,teaspoons salt ,2,teaspoons pepper ,0.25,pounds of red pepper flakes ,>1. Bring a large pot of water to a boil >2.Cook pasta in boiling water until it is soft and then drain the water >3.Heat olive oil in a large skillet over medium high heat >4.Add onion and garlic to the skillet and cook them until the onions are brown >5.Mix tomatoes mushrooms and spinach into the onion mixture >6.Season the onion mixture with salt pepper and red pepper flakes >7.Cook the onion mixture for 2 more minutes until tomatoes are heated through and spinach is wilted >8.Reduce heat to medium and stir in pasta and feta cheese >9.Cook pasta until it is heated through
+Salmon with Brown Sugar Glaze,entree,gluten-free,15,30,1,1,tablespoon brown sugar,1,teaspoons dijon mustard,6,ounce boneless salmon fillets ,1,teaspoon salt ,1,teaspoon pepper ,0,0,0,0,0,0,>1. Preheat the oven to 300 degree and set the oven rack about 6 inches from the heat source >2. Season the salmon with salt and pepper before arranging it on a pan >3.Whish together the brown sugar and dijon mustard in a small bowl >4. Spoon the brown sugar evenly on top of the salmon fillets >5. Cook the fish under the broiler for about 10-15 minutes until the fish flakes easily with a fork
+grilled cheese ,entree,vegetarian,20,400,1,2,slices white bread ,1,tablespoon of butter,1,slice of chedder cheese ,0,0,0,0,0,0,0,0,0,0,>1. Preheat skillet over medium heat >2. Generously butter one slice of bread >3. Place bread butter side down on skillet and add one slice of cheese >4. Butter second slide of bread on one side and place it butter side up on top of the sandwich >5.Grill the sandwich lightly until it is browned and then flip it
+Veggie Stir Fry ,entree,vegan,40,119,1,0.5,teaspoons cornstarch,0.25,crushed cloves of garlic ,2,teaspoons vegetable oil ,0.25,heads of broccli cut into florets ,2,tablespoons of carrots cut lengthwise ,1,teaspoons soy sauce ,1,teaspoons of water,2,teaspoons chopped onion ,>1. In large bowl. blend cornstarch. garlic. and 1 tablespoon vegetable oil until cornstarch is dissolved >2. Mix in broccoli. carrots.and green beans. Toss them until they are lightly coated in the sauce >3. Heat remaining 1 tablespoon of vegetable oil in a large skillet >4. Cook vegetables in oil for 2 minutes >5. Stir in soy sauce and water >6. Mix in onions and salt >7. Cook until vegetables are tender but still crisp
+tomato basil soup,soup,vegetarian,30,350,1,1,tablespoon olive oil,5,ounces condenscend tomato soup ,2,tablespoons mariania sauce  ,0.5,cloves of garlic ,0.5,teaspoons oregano,1,teaspoons chopped basil,3, italian style seasoned crotons ,1,tablespoons grated permesan cheese  ,>1. Heat olive oil in a large saucepan over medium heat >2. Saute garlic in oil for 2-3 minutes and stir >3. Stir condensed tomato soup and marinara sauce into garlic >4. Slowly add water>5.Mix oregano and black pepper into soup >6. Bring soup to a simmer and then return the heat from high to low >7.Cook soup for 15 more minutes >8.Stir basil into soup >9.Ladle soup into bowls and top with croutons and Parmesan cheese
+Brownies,dessert,dairy-free,40,200,10,0.5,cup vegetable oil,1,cup sugar,1,teaspoon vanilla,2,eggs,0.25,teaspoon baking powder,0.33,cup cocoa powder,0.5,cup flour,0.25,teaspoon salt,>1. Mix oil and sugar >2. Add eggs and vanilla >3. Mix dry ingredients in a separate bowl >4. Stir all ingredients together and pour into an 8 by 8 pan >5. Bake for 30 minutes at 350o
+Pesto pasteries,appetizer,vegetarian,40,150,10,2,tablespoons pine nuts; toasted,1,garlic clove,3,tablespoons grated Parmigiano-Reggiano cheese,2,1 ounce packages frozen basil,1,sheet frozen puff pastery dough; thawed,0.375,teaspoon kosher salt,0,0,0,0,>1. Pulse nuts and garlic in a mini food processor until finely chopped >2. Add cheese >3. Tear leaves off basil and add to processor >4. Process until paste-like >5. Roll dough into 10 by 9 rectangle. Spread pesto over dough and sprinkle with salt >6. Roll up the long sides of the dough until they meet in the middle. Place in freezer for 10 minutes >7. Cut dough cross wise into 20 slices. Arrange on a cookie sheet and bake at 400o for 16 minutes
+Turkey Meatballs,appetizer,gluten-free,40,100,1,100,grams turkey mince,0.25,garlic clove; peeled and chopped,1,Cavolo Nero leaf; leaves chopped finely,0.1,teaspoon salt ,0,cocunut oil; for frying,0,0,0,0,0,0,>1. Empty mince into mixing bowl. Add garlic and chopped Cavolo Nero leaf >2. Add salt and mix well >3. Heat coconut oil in a frying pan and form the mixture into balls. Drop them in the ban for 5-10 minutes >4. Place the meatballs in the oven at 400o for 10-15 minutes
+Slow cooker pulled chicken,entree,gluten-free,180,200,4,1,pound chicken breask,1,16 oz jar of salsa,1,15 ounce can of black beans,0.33,cup crumbled feta,0.5,teaspoon cumin,0.5,teaspoon smoked paprika,0,red pepper flakes; salt and pepper to taste,0,0,>1. Pour salsa into slow cooker and layer beans and chicken on top >2. Cook on high for three hours >3. After 3 hours. remove chicken from slow cooker and shred with forks. Place back into slow cooker. >4. Add spices and cheese and mix to combine
+White wine and butter pasta,entree,vegan,15,250,1,4,tablespoons vegan butter,2,cloves garlic,1.5,tablespoons flour,0.33,cup white wine,0.25,cup capers,1,lemon; juiced,0,salt to taste,0,0,>1. Melt half of the butter in a small frying pan. then add garlic >2. When fragrant. add flour and stir to combine. Add white wine >3. Turn down heat to let alcohol cook off >4. Turn heat back up and add lemon juice and remaining butter >5. Stir to combine and serve over pasta. with capers
+Sweet potato gnocchi,entree,vegetarian,70,200,4,2,sweet potatoes,1.25,cups flour,1,egg,0,salt and pepper to taste,0,0,0,0,0,0,0,0,>1. Bake the potatoes for 1 hour at 400o. Mash the potatoes >2. Combine mashed potatoes with egg and flour until dough is formed >3. Shape gnocchi. use a fork to give a slight indentation >4. Cook in boiling water. They are done when they float to the top.
+Chilaquiles,entree,vegan,10,350,1,1,teaspoon oil,3,eggs,2.5,cups tottilla chips,0.5,cup shredded cheese,2,tablespoons hot sauce,0,0,0,0,0,0,>1. Beat the eggs >2. Add oil to a hot nonstick pan >3. Pour in eggs and quickly mix in tortilla chips >4. Stir in cheese and lower heat. cook for 3-4 minutes >5.Remove from pan and drizzle with hot sauce
+Watermelon; feta; and mint salad,salad,vegetarian,5,100,1,2,containers watermelon cubes,1,pack of mint leaves,0,feta cheese crumbles,1,cup arugla leaves,0,0,0,0,0,0,0,0,>1. Chop the watermelon and mint into small pieces >2. Place watermelon and mint in a bowl of arugula and mix to combine >3. Top with feta
+warm beet salad,salad,vegetarian,90,150,1,0.5,bunch of beets,0.5,medium onion,1,tablespoon olive oil,0.5,cup cookied quinoa,0.25,cup feta cheese; crumbled,0,0,0,0,0,0,>1. Preheat oven to 400o >2. Scrub beets. wrap in aluminum foil. and roast on a baking sheet for an hour. Cut into quarters >3. Separate stems from greens. Wash and dry both >4. Sautee onion in olive oil in a medium pan. add beet stems and cook for 5 minutes >5. Add greens and seasoning to taste. cook until greens are mostly wilted >6. Add cooked grains and roasted beets to the pan. toss to combine >7. Transfer into a bowl and top with crumbled cheese
+Vegetable stir fry,entree,vegan,15,300,1,1,packet frozen brown rice,0.2,package firm tofu,2,cups chopped vegetables,0.25,seasame ginger dressing,0,0,0,0,0,0,0,0,>1. Cook the rice >2. Cube tofu into 1-inch squares >3. Cook vegetables until tender >4. Heat dressing in a skillet. Add vegetables and tofu and mix to combine. Cook 3-4 minutes >5. Place rice in a bowl. Scoop mixture on top to serve
+Cheesy Quinoa Fritters,appetizer,vegetarian,15,250,2,1,cup cooked quinoa,1,eggs,1,teaspoon flour,0.5,cup shredded cheese,1,tablespoon oil,0,salt and pepper to taste,0,0,0,0,>1. Beat egg >2. In a separate bowl. mix quinoa and cheese. Pour in egg and mix >3. Add flour. salt. and pepper. and stir to combine >4. Add oil to a skillet and heat >5. Create small balls of mixture and slightly flatten. Place fritters into pan >6. Cook fritters for 5 minutes on each side >7. Allow to cool slightly on paper towel
