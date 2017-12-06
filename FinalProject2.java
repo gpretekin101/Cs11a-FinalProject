@@ -1,7 +1,7 @@
 public class FinalProject2 {
 
   //declare static arrays
-  static int dbSize = 29;
+  static int dbSize = 38;
   static String[] name = new String[dbSize];
   static String[] typeList = new String[dbSize];
   static String[] description = new String[dbSize];
