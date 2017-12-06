@@ -1,5 +1,5 @@
 public class FinalProject {
-  static int dbSize = 21;
+  static int dbSize = 32;
   static String[] name = new String[dbSize];
   static String[] typeList = new String[dbSize];
   static String[] description = new String[dbSize];
@@ -29,16 +29,13 @@ public class FinalProject {
     boolean moreInput = true;
     boolean moreRecipes = true;
     while (moreInput == true) {
-      welcome();
       readSpreadsheet();
       welcome();
-      narrowRecipes();
       //printRecipes();
-
-      int servings = narrowRecipes();
       while (moreRecipes == true){
         int index = chooseRecipe();
-        printRecipe(index, servings);
+        int servings = narrowRecipes();
+        printChosenRecipe(index, servings);
         moreRecipes = chooseMore();
       }
       moreInput=false;
@@ -105,10 +102,9 @@ public class FinalProject {
     int cal = getCal();
     int servings = getServings();
     printRecipes(type, label, time, cal);
+    chooseRecipe();
     return servings;
   }
-
-<<<<<<< HEAD
 /*public static String[] narrowRecipes() {
 =======
 
@@ -140,16 +136,15 @@ public class FinalProject {
       } TextIO.putf("We have %d recipes that fit the criteria you have inputted %n", count);
         return findings[]
   } */
-=======
 
   public static String getType(){
     TextIO.readStandardInput();
     TextIO.putf("What type of dish would you like to make? %n");
     String t;
     do{
-      TextIO.putf("Please type salad, dessert, soup, appetizer, or entree %n");
+      TextIO.putf("Please type salad, soup, appetizer, or entree %n");
       t = TextIO.getln();
-    }while (!t.equalsIgnoreCase("salad") && !t.equalsIgnoreCase("dessert") && !t.equalsIgnoreCase("soup") && !t.equalsIgnoreCase("appetizer") && !t.equalsIgnoreCase("entree"));
+    }while (!t.equalsIgnoreCase("salad") && !t.equalsIgnoreCase("soup") && !t.equalsIgnoreCase("appetizer") && !t.equalsIgnoreCase("entree"));
     return t;
   }
 
@@ -198,7 +193,7 @@ public class FinalProject {
   }
 
 
-  public static void printRecipes(String type, String label, int time, int cal){
+  public static void printRecipes(String type, String label, double time, double cal){
     int count = 0;
     for (int i=0; i<dbSize; i++){
       if(typeList[i].equalsIgnoreCase(type) && description[i].equalsIgnoreCase(label) && timeList[i]<=time && calories[i]<=cal){
@@ -243,12 +238,10 @@ public class FinalProject {
   }
 
 
-  public static void printRecipe(int index, int servings){
+  public static void printChosenRecipe(int index, int servings){
     TextIO.putf("%n%n%n %s%n", name[index]);
     changeServings(index, servings);
     printIngandMeas(index);
-
-
   }
 
 
@@ -266,12 +259,6 @@ public class FinalProject {
     }
   }
 
-
-  public static boolean chooseMore(){
-    TextIO.putf("Would you like to pick another dish to get the recipe for?%n");
-    return TextIO.getlnBoolean();
-  }
-}
   public static void printIngandMeas(int index) {
     TextIO.putf("%1.2f %s %n", meas1[index], ing1[index]);
     TextIO.putf("%1.2f %s %n", meas2[index], ing2[index]);
@@ -279,25 +266,22 @@ public class FinalProject {
     TextIO.putf("Ingredients: %n");
     if (!ing4[index].equals("0")) {
         TextIO.putf("%d %s %n", meas4, ing4);
-    } if (!ing5[index].equals("0")) {
+    } else if (!ing5[index].equals("0")) {
         TextIO.putf("%d %s %n", meas5, ing5);
-    } if (!ing6[index].equals("X")) {
+    } else if (!ing6[index].equals("0")) {
         TextIO.putf("%d %s %n", meas6, ing6);
-    } if (!ing7[index].equals("X")) {
+    } else if (!ing7[index].equals("0")) {
         TextIO.putf("%d %s %n", meas7, ing7);
-    } if (!ing5[index].equals("X")) {
+    } else if (!ing5[index].equals("0")) {
         TextIO.putf("%d %s %n", meas8, ing8);
-    } else {
-          break;
-      }
+    }
     TextIO.putf("Directions: %d %n", directions[index]);
     TextIO.putf("Calories: %d %n", calories[index]);
-    TextIO.putf("Time to Make: %d %n", time[index]);
-    TextIO.putf("This recipe is %s and %s %d", type[index], description[index]);
+    TextIO.putf("Time to Make: %d %n", timeList[index]);
+    TextIO.putf("This recipe is %s and %s %d", typeList[index], description[index]);
   }
-
-<<<<<<< HEAD
->>>>>>> e2e710df7eeb169201672d0d7bfe097e0c95c77d
-=======
-*/
->>>>>>> 1467f39e1226dc3f1ef8fd1f5cf5264726d7303e
+  public static boolean chooseMore(){
+    TextIO.putf("Would you like to pick another dish to get the recipe for?%n");
+    return TextIO.getlnBoolean();
+  }
+}
