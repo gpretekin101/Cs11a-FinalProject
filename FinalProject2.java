@@ -322,13 +322,16 @@ public class FinalProject2 {
 
 
   /**
+  print ingredients and new measurements
+  @param index the index (int) of the recipe
+  no return
   */
   public static void printIngandMeas(int index) {
     TextIO.putf("Ingredients: %n");
     TextIO.putf("%1.2f %s %n", meas1[index], ing1[index]);
     TextIO.putf("%1.2f %s %n", meas2[index], ing2[index]);
-    TextIO.putf("%1.2f %s %n", meas3[index], ing3[index]);
-    if (meas4[index]!=0) {
+    TextIO.putf("%1.2f %s %n", meas3[index], ing3[index]);        //all recipes have at least 3 ingredients
+    if (meas4[index]!=0) {                                        //check to make sure there is an ingredient to print before printing it
         TextIO.putf("%1.2f %s %n", meas4[index], ing4[index]);
     }if (meas5[index]!=0) {
         TextIO.putf("%1.2f %s %n", meas5[index], ing5[index]);
@@ -341,15 +344,27 @@ public class FinalProject2 {
     }
   }
 
+
+  /**
+  print the directions for the recipe
+  @param index the index (int) of the recipe
+  no return
+  */
   public static void printDirections(int index){
-    String dir = directions[index];
-    String [] split = dir.split(">");
-    for (int i=0; i<split.length; i++){
+    String dir = directions[index];                           //turn the directions for the recipe into a string dir
+    String [] split = dir.split(">");                         //split the string at the character ">" and store into an array split
+    for (int i=0; i<split.length; i++){                       //print out each index of the array with a carriage return after
       TextIO.putf("%s%n", split[i]);
     }
   }
 
 
+  /**
+  prints out the calories, the amount of time to make, and the actual servings of the recipe
+  @param index the index (int) of the recipe
+  @param actualServings the actual number of servings the recipe makes, double
+  no return
+  */
   public static void printOtherInfo(int index, double actualServings){
     TextIO.putf("Calories per serving: %1.0f%n", calories[index]);
     TextIO.putf("Time to make: %1.0f minutes%n", timeList[index]);
@@ -357,12 +372,22 @@ public class FinalProject2 {
   }
 
 
+  /**
+  ask the user if they want the instructions to make a different recipe
+  no parameters
+  @return true if they want to get the instructions for a different recipe, false if they don't
+  */
   public static boolean chooseMore(){
     TextIO.putf("Would you like to pick another dish to get the recipe for?%n");
     return TextIO.getlnBoolean();
   }
 
 
+  /**
+  ask the user if they want to enter a different set of criteria to find new recipes
+  no parameters
+  @return true if they want to enter more criteria, false if they do not, program ends if false
+  */
   public static boolean more(){
     TextIO.putf("Would you like to enter new criteria for a recipe?%n");
     return TextIO.getlnBoolean();
