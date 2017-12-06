@@ -118,7 +118,7 @@ public static void welcome() {
     TextIO.putf("The app will help you make the perfect recipes for your meal");
   }
 
-public static String narrowRecipes() {
+/*public static String[] narrowRecipes() {
       String[] findings = new String[30];
       String typeU, label;
       int timeU, cal, count;
@@ -139,8 +139,8 @@ public static String narrowRecipes() {
           }
       } TextIO.putf("We have %d recipes that fit the criteria you have inputted %n", count);
         return findings[]
+  } */
 =======
-
 
   public static String getType(){
     TextIO.readStandardInput();
@@ -215,7 +215,7 @@ public static String narrowRecipes() {
 
 
   public static int chooseRecipe(){
-    TextIO.putf("Which dish would you like to get the recipe for?%n");
+    TextIO.putf("Which dish would you like to get the recipe for?%n"); //
     boolean validInput = false;
     String chosenRecipe;
     int index=0;
@@ -245,7 +245,9 @@ public static String narrowRecipes() {
   public static void printRecipe(int index, int servings){
     TextIO.putf("%n%n%n %s%n", name[index]);
     changeServings(index, servings);
-    TextIO.putf("%1.2f %s %n", meas1[index], ing1 [index]);
+    printIngandMeas(index);
+
+
   }
 
 
@@ -269,47 +271,28 @@ public static String narrowRecipes() {
     return TextIO.getlnBoolean();
   }
 }
-
-    /*
-
->>>>>>> e2e710df7eeb169201672d0d7bfe097e0c95c77d
-        TextIO.putf("The recipes we found were ");
-        for (int i; i < count; i++) {
-            if (typeU.equals(type[i]) && label.equals(description[i]) && time[i] <= timeU && calories[i] <= cal){
-                TextIO.putf("%s", name[i]);
-                TextIO.putf("Ingredients: %n");
-                for (int j=0; j<8; j++) { //goes through each of the ingredients and measurements
-                  if (!ing1[i].equals("X")) {
-                      TextIO.putf("%d %s %n", meas1, ing1);
-                  } if (!ing2[i].equals("X")) {
-                      TextIO.putf("%d %s %n", meas2, ing2);
-                  } if (!ing3[i].equals("X")) {
-                      TextIO.putf("%d %s %n", meas3, ing3);
-                  } if (!ing4[i].equals("X")) {
-                      TextIO.putf("%d %s %n", meas4, ing4);
-                  } if (!ing5[i].equals("X")) {
-                      TextIO.putf("%d %s %n", meas5, ing5);
-                  } if (!ing6[i].equals("X")) {
-                      TextIO.putf("%d %s %n", meas6, ing6);
-                  } if (!ing7[i].equals("X")) {
-                      TextIO.putf("%d %s %n", meas7, ing7);
-                  } if (!ing5[i].equals("X")) {
-                      TextIO.putf("%d %s %n", meas8, ing8);
-                  } else {
-                      break;
-                  }
-                }
-                TextIO.putf("Directions: %d %n", directions[i]);
-                TextIO.putf("Calories: %d %n", calories[i]);
-                TextIO.putf("Time to Make: %d %n", time[i]);
-                TextIO.putf("This recipe is %s and %s %d", type[i], description[i]);
-            }
+  public static void printIngandMeas(int index) {
+    TextIO.putf("%1.2f %s %n", meas1[index], ing1[index]);
+    TextIO.putf("%1.2f %s %n", meas2[index], ing2[index]);
+    TextIO.putf("%1.2f %s %n", meas3[index], ing3[index]);
+    TextIO.putf("Ingredients: %n");
+    if (!ing4[index].equals("0")) {
+        TextIO.putf("%d %s %n", meas4, ing4);
+    } if (!ing5[index].equals("0")) {
+        TextIO.putf("%d %s %n", meas5, ing5);
+    } if (!ing6[index].equals("X")) {
+        TextIO.putf("%d %s %n", meas6, ing6);
+    } if (!ing7[index].equals("X")) {
+        TextIO.putf("%d %s %n", meas7, ing7);
+    } if (!ing5[index].equals("X")) {
+        TextIO.putf("%d %s %n", meas8, ing8);
+    } else {
+          break;
       }
-   }
-<<<<<<< HEAD
- }
-=======
-}
+    TextIO.putf("Directions: %d %n", directions[index]);
+    TextIO.putf("Calories: %d %n", calories[index]);
+    TextIO.putf("Time to Make: %d %n", time[index]);
+    TextIO.putf("This recipe is %s and %s %d", type[index], description[index]);
+  }
 
-*/
 >>>>>>> e2e710df7eeb169201672d0d7bfe097e0c95c77d
