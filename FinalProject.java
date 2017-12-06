@@ -30,6 +30,7 @@ public class FinalProject {
     boolean moreRecipes = true;
     while (moreInput == true) {
       readSpreadsheet();
+<<<<<<< HEAD
       welcome();
       //printRecipes();
       while (moreRecipes == true){
@@ -39,10 +40,24 @@ public class FinalProject {
         moreRecipes = chooseMore();
       }
       moreInput=false;
+=======
+//      welcome();
+//      narrowRecipes();
+      //printRecipes();
+
+//      int servings = narrowRecipes();
+//      while (moreRecipes == true){
+//        int index = chooseRecipe();
+//        printRecipe(index, servings);
+//        moreRecipes = chooseMore();
+//      }
+//      moreInput=false;
+>>>>>>> c060533797a786ba5d4b2ae210e2af9bebcadf99
       //measurments();
       //more();
-    }
+//    }
   }
+}
 
   public static void welcome() {
     TextIO.putf("Welcome to the Recipe Generator! %n");
@@ -66,6 +81,7 @@ public class FinalProject {
 
   public static void readStrings(int pos, String[] fields){
     name[pos] = fields[0];
+    TextIO.putf("%s%n", name[pos]);
     typeList[pos] = fields[1];
     description[pos] = fields[2];
     ing1[pos] = fields[7];
@@ -93,8 +109,9 @@ public class FinalProject {
     meas7[pos] = Double.parseDouble(fields[18]);
     meas8[pos] = Double.parseDouble(fields[20]);
   }
+}
 
-
+/*
   public static int narrowRecipes(){
     String type = getType();
     String label = getLabel();
@@ -105,6 +122,11 @@ public class FinalProject {
     chooseRecipe();
     return servings;
   }
+<<<<<<< HEAD
+=======
+
+*/
+>>>>>>> c060533797a786ba5d4b2ae210e2af9bebcadf99
 /*public static String[] narrowRecipes() {
 =======
 
@@ -137,6 +159,7 @@ public class FinalProject {
         return findings[]
   } */
 
+/*
   public static String getType(){
     TextIO.readStandardInput();
     TextIO.putf("What type of dish would you like to make? %n");
@@ -259,6 +282,15 @@ public class FinalProject {
     }
   }
 
+<<<<<<< HEAD
+=======
+
+  public static boolean chooseMore(){
+    TextIO.putf("Would you like to pick another dish to get the recipe for?%n");
+    return TextIO.getlnBoolean();
+  }
+
+>>>>>>> c060533797a786ba5d4b2ae210e2af9bebcadf99
   public static void printIngandMeas(int index) {
     TextIO.putf("%1.2f %s %n", meas1[index], ing1[index]);
     TextIO.putf("%1.2f %s %n", meas2[index], ing2[index]);
@@ -280,8 +312,13 @@ public class FinalProject {
     TextIO.putf("Time to Make: %d %n", timeList[index]);
     TextIO.putf("This recipe is %s and %s %d", typeList[index], description[index]);
   }
+<<<<<<< HEAD
   public static boolean chooseMore(){
     TextIO.putf("Would you like to pick another dish to get the recipe for?%n");
     return TextIO.getlnBoolean();
   }
 }
+=======
+}
+*/
+>>>>>>> c060533797a786ba5d4b2ae210e2af9bebcadf99
