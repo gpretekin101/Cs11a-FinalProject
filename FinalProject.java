@@ -1,5 +1,5 @@
 public class FinalProject {
-  static int dbSize = 21;
+  static int dbSize = 32;
   static String[] name = new String[dbSize];
   static String[] typeList = new String[dbSize];
   static String[] description = new String[dbSize];
@@ -31,21 +31,22 @@ public class FinalProject {
     while (moreInput == true) {
       welcome();
       readSpreadsheet();
-      welcome();
-      narrowRecipes();
+//      welcome();
+//      narrowRecipes();
       //printRecipes();
 
-      int servings = narrowRecipes();
-      while (moreRecipes == true){
-        int index = chooseRecipe();
-        printRecipe(index, servings);
-        moreRecipes = chooseMore();
-      }
-      moreInput=false;
+//      int servings = narrowRecipes();
+//      while (moreRecipes == true){
+//        int index = chooseRecipe();
+//        printRecipe(index, servings);
+//        moreRecipes = chooseMore();
+//      }
+//      moreInput=false;
       //measurments();
       //more();
-    }
+//    }
   }
+}
 
   public static void welcome() {
     TextIO.putf("Welcome to the Recipe Generator! %n");
@@ -69,6 +70,7 @@ public class FinalProject {
 
   public static void readStrings(int pos, String[] fields){
     name[pos] = fields[0];
+    TextIO.putf("%s%n", name[pos]);
     typeList[pos] = fields[1];
     description[pos] = fields[2];
     ing1[pos] = fields[7];
@@ -96,8 +98,9 @@ public class FinalProject {
     meas7[pos] = Double.parseDouble(fields[18]);
     meas8[pos] = Double.parseDouble(fields[20]);
   }
+}
 
-
+/*
   public static int narrowRecipes(){
     String type = getType();
     String label = getLabel();
@@ -108,7 +111,7 @@ public class FinalProject {
     return servings;
   }
 
-<<<<<<< HEAD
+*/
 /*public static String[] narrowRecipes() {
 =======
 
@@ -140,8 +143,8 @@ public class FinalProject {
       } TextIO.putf("We have %d recipes that fit the criteria you have inputted %n", count);
         return findings[]
   } */
-=======
 
+/*
   public static String getType(){
     TextIO.readStandardInput();
     TextIO.putf("What type of dish would you like to make? %n");
@@ -271,7 +274,7 @@ public class FinalProject {
     TextIO.putf("Would you like to pick another dish to get the recipe for?%n");
     return TextIO.getlnBoolean();
   }
-}
+
   public static void printIngandMeas(int index) {
     TextIO.putf("%1.2f %s %n", meas1[index], ing1[index]);
     TextIO.putf("%1.2f %s %n", meas2[index], ing2[index]);
@@ -295,9 +298,5 @@ public class FinalProject {
     TextIO.putf("Time to Make: %d %n", time[index]);
     TextIO.putf("This recipe is %s and %s %d", type[index], description[index]);
   }
-
-<<<<<<< HEAD
->>>>>>> e2e710df7eeb169201672d0d7bfe097e0c95c77d
-=======
+}
 */
->>>>>>> 1467f39e1226dc3f1ef8fd1f5cf5264726d7303e
