@@ -161,7 +161,7 @@ public class FinalProject2 {
   @return the restriction on the dish, string
   */
   public static String getLabel(){
-    TextIO.putf("Do your guests have any dietary restrictions? %n");
+    TextIO.putf("%nDo your guests have any dietary restrictions? %n");
     String l;
     do{                                                             //make sure user's input is valid
       TextIO.putf("Please type gluten-free, dairy-free, vegetarian, or vegan %n");
@@ -177,7 +177,7 @@ public class FinalProject2 {
   @return the time the user has to make the dish, int
   */
   public static int getTime(){
-    TextIO.putf("How much time (in minutes) do you have to make the recipe? %n");
+    TextIO.putf("%nHow much time (in minutes) do you have to make the recipe? %n");
     int time = TextIO.getlnInt();
     if (time<0){                                                     //make sure user's input is valid
       TextIO.putf("That is not a valid entry. Please enter the amount of time in minutes you have to make this recipe%n");
@@ -193,7 +193,7 @@ public class FinalProject2 {
   @return the maximum number of calories per serving, int
   */
   public static int getCal(){
-    TextIO.putf("What is the most amount of calories per serving your recipe can have? %n");
+    TextIO.putf("%nWhat is the most amount of calories per serving your recipe can have? %n");
     int cal = TextIO.getlnInt();
     if (cal <0){                                                      //make sure the user's input is valid
       TextIO.putf("That is not a valid entry. Please enter the maximum amount of calories per serving your recipe can have%n");
@@ -209,7 +209,7 @@ public class FinalProject2 {
   @return the number of servings, int
   */
   public static int getServings(){
-    TextIO.putf("How many people are you cooking for?%n");
+    TextIO.putf("%nHow many people are you cooking for?%n");
     int servings = TextIO.getlnInt();
     if (servings<0){                                                    // make sure the user's input is valid
       TextIO.putf("That is not a valid entry. Please enter the number of servings you would like to make %n");
