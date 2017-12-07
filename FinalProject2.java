@@ -367,7 +367,7 @@ public class FinalProject2 {
   no return
   */
   public static void printOtherInfo(int index, double actualServings){
-    TextIO.putf("Calories per serving: %1.0f%n", calories[index]);
+    TextIO.putf("%nCalories per serving: %1.0f%n", calories[index]);
     TextIO.putf("Time to make: %1.0f minutes%n", timeList[index]);
     TextIO.putf("This recipe will make %1.0f servings%n", actualServings);
   }
@@ -379,7 +379,7 @@ public class FinalProject2 {
   @return true if they want to get the instructions for a different recipe, false if they don't
   */
   public static boolean chooseMore(){
-    TextIO.putf("Would you like to pick another dish to get the recipe for?%n");
+    TextIO.putf("%nWould you like to pick another dish to get the recipe for?%n");
     return TextIO.getlnBoolean();
   }
 
