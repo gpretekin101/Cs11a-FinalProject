@@ -55,7 +55,7 @@ public class FinalProject2 {
   no return
   */
   public static void welcome() {
-    TextIO.putf("Welcome to the Recipe Generator! %n");
+    TextIO.putf("%nWelcome to the Recipe Generator! %n");
     TextIO.putf("The app will help you make the perfect recipes for your meal%n%n%n");
   }
 
