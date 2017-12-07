@@ -1,5 +1,6 @@
 package recipeFinder;
 public class Spreadsheet{
+    import java.recipeFinder.Variables;
     /**
     read information from a CSV file
     no parameters

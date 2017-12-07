@@ -1,32 +1,5 @@
-package recipeFinder;
 public class FinalProject3 {
-
-  //declare public static arrays
-  public static int dbSize = 54;
-  public static String[] name = new String[dbSize];
-  public static String[] typeList = new String[dbSize];
-  public static String[] description = new String[dbSize];
-  public static double[] timeList = new double[dbSize];
-  public static double[] calories = new double[dbSize];
-  public static int[] servingsList = new int[dbSize];
-  public static double[] meas1 = new double[dbSize];
-  public static String[] ing1 = new String[dbSize];
-  public static double[] meas2 = new double[dbSize];
-  public static String[] ing2 = new String[dbSize];
-  public static double[] meas3 = new double[dbSize];
-  public static String[] ing3 = new String[dbSize];
-  public static double[] meas4 = new double[dbSize];
-  public static String[] ing4 = new String[dbSize];
-  public static double[] meas5 = new double[dbSize];
-  public static String[] ing5 = new String[dbSize];
-  public static double[] meas6 = new double[dbSize];
-  public static String[] ing6 = new String[dbSize];
-  public static double[] meas7 = new double[dbSize];
-  public static String[] ing7 = new String[dbSize];
-  public static double[] meas8 = new double[dbSize];
-  public static String[] ing8 = new String[dbSize];
-  public static String[] directions = new String[dbSize];
-
+  import java.recipeFinder.Variables;
   /**
   The main method
   @param args an array of strings which we ignore
