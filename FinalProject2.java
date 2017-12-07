@@ -237,9 +237,9 @@ public class FinalProject2 {
       }
     }
     if (count>0){                                                       //tell the user how many recipes were found
-      TextIO.putf("There are %d %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n",count, type, label, time, cal);
+      TextIO.putf("%nThere are %d %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n",count, type, label, time, cal);
     } else{
-      TextIO.putf("Sorry, there are no %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n%n%n",type, label, time, cal);
+      TextIO.putf("%nSorry, there are no %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n%n%n",type, label, time, cal);
       narrowRecipes();                                                  //ask for different criteria if no recipes were found
     }
   }
