@@ -250,7 +250,7 @@ public class FinalProject2 {
   @return the index (int) of the chosen recipe
   */
   public static int chooseRecipe(){
-    TextIO.putf("Which dish would you like to get the recipe for?%n");
+    TextIO.putf("%nWhich dish would you like to get the recipe for?%n");
     boolean validInput = false;
     String chosenRecipe;
     int index=0;
@@ -290,7 +290,7 @@ public class FinalProject2 {
   no return
   */
   public static void printChosenRecipe(int index, int servings){
-    TextIO.putf("%n%n%n%s%n", name[index]);                    //print out the title of the recipe
+    TextIO.putf("%n%n%s%n", name[index]);                    //print out the title of the recipe
     double multiply = changeServings(index, servings);         //change proportions of recipe to fit with the number of servings the user wants to make
     double actualServings= multiply*servingsList[index];       //calculate the actual servings the recipe will now make (should be equal to the number of servings the user needs to make)
     printIngandMeas(index);                                    //print ingredients and measurements
@@ -390,7 +390,7 @@ public class FinalProject2 {
   @return true if they want to enter more criteria, false if they do not, program ends if false
   */
   public static boolean more(){
-    TextIO.putf("Would you like to enter new criteria for a recipe?%n");
+    TextIO.putf("%nWould you like to enter new criteria for a recipe?%n");
     return TextIO.getlnBoolean();
   }
 }
