@@ -36,11 +36,11 @@ public class FinalProject2 {
     while (moreInput == true) {
       readSpreadsheet();                                        //read data from excel file
       welcome();                                                //print welcome message
-      int servings = narrowRecipes();                           //get user's criteria for recipe and print the title of recipes that fit in a list
-      while (moreRecipes == true){                              //as long as the user wants to get recipes from the list
+      int servings = narrowRecipes();                           //get user's criteria for recipe and print the title of recipes on the spreadsheet that fit in a list
+      while (moreRecipes == true){                              //checks to make sure that the user want to find another recipe
         int index = chooseRecipe();                             //get the index of the recipe the user chose
         printChosenRecipe(index, servings);                     //print the ingredients, directions, and other information about the recipe the user chose
-        moreRecipes = chooseMore();                             //as the user if they want to choose another recipe title to get the ingredients and directions for
+        moreRecipes = chooseMore();                             //as the user if they want to choose another recipe title that fits their criteria to get the ingredients and directions for
       }
       moreInput = more();                                       //ask the user if they want to put in more information to get a new set of recipes
       moreRecipes =true;
@@ -50,7 +50,7 @@ public class FinalProject2 {
 
 
   /**
-  welcome message
+  welcome() prints the welcome message
   no parameters
   no return
   */
@@ -69,7 +69,7 @@ public class FinalProject2 {
     TextIO.readFile("Recipes.csv");                           //read from file
     TextIO.getln();                                           //ignore the first row (title of the columns)
     int pos=0;
-    while (!TextIO.eof()){                                    //while it is not at the end of the file
+    while (!TextIO.eof()){                                    //make sure computer has not reached the end of the CSV file
       String line = TextIO.getln();                           //read in a line of data
       String[] fields = line.split(",");                      //split the line at commas
       readStrings(pos, fields);                               //set the values in the arrays
@@ -80,7 +80,7 @@ public class FinalProject2 {
 
 
   /**
-  taking strings from the CSV file and assigning them to arrays
+  readString() takes strings from the CSV file and assigning them to arrays
   @param pos the position in the array that a value will be assigned to
   @param fields an array of strings that contains the values to be assigned
   no return since these are static arrays
@@ -102,7 +102,7 @@ public class FinalProject2 {
 
 
   /**
-  taking strings from the CSV file, converting them to doubles or ints, and assigning them to arrays
+  ReadNumbers() takes strings from the CSV file, converting them to doubles or ints, and assigning them to arrays
   @param pos the position in the array that a value will be assigned to
   @param fields and array of strings that contains the value to be assigned
   no return since these are static arrays
@@ -123,17 +123,17 @@ public class FinalProject2 {
 
 
   /**
-  gets the criteria of a recipe from the user and prints out the titles of recipes that fulfill the criteria
+  narrowRecipes() gets the criteria of a recipe from the user and prints out the titles of recipes that fulfill the criteria
   no parameters
-  @return integer servings, the number of servings the user wants to make
+  @return servings which represents the number of servings the user wants to make, int
   */
   public static int narrowRecipes(){
     String type = getType();                                    //appetizer, entree, salad, soup
     String label = getLabel();                                  //vegerarian, vegan, gluten-free, dairy-free
-    int time = getTime();                                       //maximum amount of time user can cook for
-    int cal = getCal();                                         //maximum number of calories per serving
+    int time = getTime();                                       //maximum amount of time user has to cook
+    int cal = getCal();                                         //maximum number of calories per serving user wants
     int servings = getServings();                               //number servings user wants to make
-    printRecipes(type, label, time, cal);                       //print the titles of relavent recipes
+    printRecipes(type, label, time, cal);                       //prints the titles of relavent recipes
     return servings;
   }
 
@@ -141,7 +141,7 @@ public class FinalProject2 {
   /**
   ask user if they want to make an appetizer, entree, salad, or soup
   no parameters
-  @return the type of dish the user wants to make, string
+  @return the type of dish the user wants to make string
   */
   public static String getType(){
     TextIO.readStandardInput();
@@ -165,7 +165,7 @@ public class FinalProject2 {
     String l;
     do{                                                             //make sure user's input is valid
       TextIO.putf("Please type gluten-free, dairy-free, vegetarian, or vegan %n");
-      TextIO.putf("(Make sure to include the - in gluten-free and dairy-free)%n");
+      TextIO.putf("(Make sure to include the "-" in gluten-free and dairy-free)%n");
       l = TextIO.getln();
     }while (!l.equalsIgnoreCase("gluten-free") && !l.equalsIgnoreCase("dairy-free") && !l.equalsIgnoreCase("vegetarian") && !l.equalsIgnoreCase("vegan"));
     return l;
@@ -173,7 +173,7 @@ public class FinalProject2 {
 
 
   /**
-  get the maximum amount of time user has to make the dish
+  getTime gets the maximum amount of time user has to make the dish
   no parameters
   @return the time the user has to make the dish, int
   */
@@ -189,7 +189,7 @@ public class FinalProject2 {
 
 
   /**
-  get the maximum amount of calories per serving in the dish
+  gets the maximum amount of calories per serving the user wants in the dish
   no parameters
   @return the maximum number of calories per serving, int
   */
@@ -230,25 +230,25 @@ public class FinalProject2 {
   */
   public static void printRecipes(String type, String label, int time, int cal){
     System.out.println();
-    int count = 0;                                                      //keep track of the number of recipes found
+    int count = 0;                                                      //keeps track of the number of recipes found that meets the user's criteria
     for (int i=0; i<dbSize; i++){                                       // go through the arrays and print the titles of recipes that match all the criteria
       if(typeList[i].equalsIgnoreCase(type) && description[i].equalsIgnoreCase(label) && timeList[i]<=time && calories[i]<=cal){
-        count++;                                                        //increment the number of recipes found
+        count++;                                                        //increment the number of recipes found which meet the user's criteria
         TextIO.putf("%d. %s%n", count, name[i]);
       }
     }
-    if (count>0){                                                       //tell the user how many recipes were found
+    if (count>0){                                                       //tell the user how many recipes were found that meets there criteria
       TextIO.putf("%nThere are %d %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n",count, type, label, time, cal);
     } else{
       TextIO.putf("%nSorry, there are no %s recipes that are %s, take less than %d minutes to make, and have under %d calories per serving.%n%n%n",type, label, time, cal);
-      narrowRecipes();                                                  //ask for different criteria if no recipes were found
+      narrowRecipes();                                                  //ask for different criteria if no recipes were found that fits the user's criteria
     }
   }
 
   /**
   ask the user to pick which recipe they want to know more about
   no parameters
-  @return the index (int) of the chosen recipe
+  @return the index of the chosen recipe as an int
   */
   public static int chooseRecipe(){
     TextIO.putf("%nWhich dish from the list above would you like to get the recipe for?%n");
@@ -256,7 +256,7 @@ public class FinalProject2 {
     boolean validInput = false;
     String chosenRecipe;
     int index=0;
-    do{                                                                   //ask the user to type in the name of the recipe and check their response is valid
+    do{                                                                   //ask the user to type in the name of the recipe fromt the list and checks that their response is valid
       chosenRecipe = TextIO.getln();
       validInput=checkInput(chosenRecipe);
     }while (!validInput);
@@ -271,11 +271,11 @@ public class FinalProject2 {
 
   /**
   check to make sure the user had a valid entry for which recipe they want to know more about
-  @param chosenRecipe a string that is the recipe the user chose
+  @param chosenRecipe a string holding the name of recipe the user chose
   @return true if valid, false if not
   */
   public static boolean checkInput(String chosenRecipe){
-    for (int i=0; i<name.length; i++){                                     //go through array of recipe names and check to see if the user's entry matches one
+    for (int i=0; i<name.length; i++){                                     //go throughs the array of recipe names and check to see if the user's entry matches one
       if (name[i].equalsIgnoreCase(chosenRecipe)){
         return true;
       }
@@ -293,23 +293,25 @@ public class FinalProject2 {
   */
   public static void printChosenRecipe(int index, int servings){
     TextIO.putf("%n%n%s%n", name[index]);                    //print out the title of the recipe
-    double multiply = changeServings(index, servings);         //change proportions of recipe to fit with the number of servings the user wants to make
-    double actualServings= multiply*servingsList[index];       //calculate the actual servings the recipe will now make (should be equal to the number of servings the user needs to make)
+    double multiply = changeServings(index, servings);        //change proportions of recipe to fit with the number of servings the user wants to make
+    double actualServings= multiply*servingsList[index];      //calculate the actual servings the recipe will now make (should be equal to the number of servings the user needs to make)
     printIngandMeas(index);                                    //print ingredients and measurements
     printDirections(index);                                    //print directions
-    printOtherInfo(index, actualServings);                     //print other infor
+    printOtherInfo(index, actualServings);                     //print other information
   }
 
 
   /**
-  multiplies the quantities of ingredients by a factor so that user will know how much to add for the number of servings they need to make
+  multiplies the quantities of ingredients by a factor so that user will
+ know how much of each ingredient the need for the amount of servings they want to make
   @param index the index (int) of the recipe
   @param servings the number of servings the user needs to make
-  @return the factor by which all quantities must be multiplied
+  @return multiply the factor by which all quantities must be multiplied
   */
   public static double changeServings(int index, int servings){
     double multiply = 1;
-    if (servings>servingsList[index]){                        //only multiply if the recipe does not make enough, some recipes cannot be scaled back and so user may need to make more than they need
+    if (servings>servingsList[index]){    //only multiply if the recipe has inputted in the spreadsheet does not make enough
+      //some recipes cannot be scaled back and so user will need to make more servings that they inputted
       multiply = (double)servings/(double)servingsList[index];
       meas1[index]=multiply*meas1[index];                    //multiply quantities of ingredients by a factor
       meas2[index]=multiply*meas2[index];
