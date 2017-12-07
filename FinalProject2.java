@@ -165,8 +165,9 @@ public class FinalProject2 {
     String l;
     do{                                                             //make sure user's input is valid
       TextIO.putf("Please type gluten-free, dairy-free, vegetarian, or vegan %n");
+      TextIO.putf("(Make sure to include the - in gluten-free and dairy-free)%n");
       l = TextIO.getln();
-    }while (!l.equalsIgnoreCase("gluten-free") && !l.equalsIgnoreCase("gluten free") && !l.equalsIgnoreCase("dairy-free") &&!l.equalsIgnoreCase("dairy free") && !l.equalsIgnoreCase("vegetarian") && !l.equalsIgnoreCase("vegan"));
+    }while (!l.equalsIgnoreCase("gluten-free") && !l.equalsIgnoreCase("dairy-free") && !l.equalsIgnoreCase("vegetarian") && !l.equalsIgnoreCase("vegan"));
     return l;
   }
 
@@ -250,7 +251,8 @@ public class FinalProject2 {
   @return the index (int) of the chosen recipe
   */
   public static int chooseRecipe(){
-    TextIO.putf("%nWhich dish would you like to get the recipe for?%n");
+    TextIO.putf("%nWhich dish from the list above would you like to get the recipe for?%n");
+    TextIO.putf("Type the name of the dish:%n");
     boolean validInput = false;
     String chosenRecipe;
     int index=0;
@@ -379,7 +381,7 @@ public class FinalProject2 {
   @return true if they want to get the instructions for a different recipe, false if they don't
   */
   public static boolean chooseMore(){
-    TextIO.putf("%nWould you like to pick another dish to get the recipe for?%n");
+    TextIO.putf("%nWould you like to pick another dish from the list above to get the recipe for?%n");
     return TextIO.getlnBoolean();
   }
 

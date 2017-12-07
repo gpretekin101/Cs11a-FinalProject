@@ -1,6 +1,6 @@
 package recipeFinder;
 //import java.recipeFinder.Variables;
-public class FinalProject3 {
+public class FinalProject4 {
   /**
   The main method
   @param args an array of strings which we ignore
@@ -9,7 +9,7 @@ public class FinalProject3 {
     boolean moreInput = true;                                   //initialize boolean variables
     boolean moreRecipes = true;
     while (moreInput == true) {
-      Spreadsheet.readSpreadsheet();                            //read data from excel file
+      Spreadsheets.readSpreadsheet();                            //read data from excel file
       welcome();                                                //print welcome message
       int servings = narrowRecipes();                           //get user's criteria for recipe and print the title of recipes that fit in a list
       while (moreRecipes == true){                              //as long as the user wants to get recipes from the list
