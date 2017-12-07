@@ -228,6 +228,7 @@ public class FinalProject2 {
   no return
   */
   public static void printRecipes(String type, String label, int time, int cal){
+    System.out.println();
     int count = 0;                                                      //keep track of the number of recipes found
     for (int i=0; i<dbSize; i++){                                       // go through the arrays and print the titles of recipes that match all the criteria
       if(typeList[i].equalsIgnoreCase(type) && description[i].equalsIgnoreCase(label) && timeList[i]<=time && calories[i]<=cal){
