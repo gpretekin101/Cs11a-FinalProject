@@ -1,3 +1,4 @@
+package recipeFinder;
 public class FinalProject3 {
 
   //declare public static arrays
