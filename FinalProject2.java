@@ -166,7 +166,7 @@ public class FinalProject2 {
     do{                                                             //make sure user's input is valid
       TextIO.putf("Please type gluten-free, dairy-free, vegetarian, or vegan %n");
       l = TextIO.getln();
-    }while (!l.equalsIgnoreCase("gluten-free") && !l.equalsIgnoreCase("dairy-free") && !l.equalsIgnoreCase("vegetarian") && !l.equalsIgnoreCase("vegan"));
+    }while (!l.equalsIgnoreCase("gluten-free") && !l.equalsIgnoreCase("gluten free") && !l.equalsIgnoreCase("dairy-free") &&!l.equalsIgnoreCase("dairy free") && !l.equalsIgnoreCase("vegetarian") && !l.equalsIgnoreCase("vegan"));
     return l;
   }
 
