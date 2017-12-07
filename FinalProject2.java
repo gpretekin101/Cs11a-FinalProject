@@ -45,7 +45,7 @@ public class FinalProject2 {
       moreInput = more();                                       //ask the user if they want to put in more information to get a new set of recipes
       moreRecipes =true;
     }
-    TextIO.putf("Bon appetit!");
+    TextIO.putf("%nBon appetit!%n");
   }
 
 
